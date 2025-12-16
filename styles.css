@@ -1,0 +1,51 @@
+.calcBody{
+    background-color: grey;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.output{
+    background-color: white;
+    padding-left: 20px;
+    margin: 10px 10px 10px;
+    width: 250px;
+    height: 80px;
+    border: solid black; 
+    border-radius: 5px;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+    flex-grow: 1; /* CRUCIAL: Make the buttons area fill all remaining vertical space */
+    padding: 0;
+    margin: 0;
+}
+.button-row {
+    display: flex;
+    flex-direction: row; /* Arrange buttons horizontally */
+    flex-grow: 1; /* CRUCIAL: Make each row take an equal share of the remaining height */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* In case you use <ul>/<li> elements */
+}
+.button-row li {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-grow: 1; /* CRUCIAL: Make each button take an equal share of the row's width */
+    flex-basis: 0; /* Ensures flex-grow works correctly */
+    
+    border: 1px solid #333; /* For visual separation */
+    background-color: #666; 
+    color: white;
+    cursor: pointer;
+}
+.span-two {
+    flex-grow: 2 !important; /* Make it take double the space of a standard button */
+}
+.button-row li:hover{
+    background-color: rgb(156, 76, 11);
+}
